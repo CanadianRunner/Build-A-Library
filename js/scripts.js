@@ -26,9 +26,9 @@ class Media {
     return ratingsSum / this.ratings.length;
   }
   addRating(value) {
-    this.ratings.push(value);
+    this.rat
   }
-  }
+  
   
   class Book extends Media {
     constructor(author, title, pages) {
@@ -42,4 +42,18 @@ class Media {
     get pages() {
       return this._pages;
     }
+    class Movie extends Media {
+      constructor(director, title, runtime) {
+        super(title);
+        this._director = director;
+        this._runTime = runTime;
+      }
+      get director() {
+        return this._director;
+      }
+      get runTime() {
+        return this._runTime;
+      }
+    }
   }
+  
