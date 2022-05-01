@@ -44,7 +44,7 @@ class Media {
       return this._pages;
     }
   }
-  class Movie extends Media {
+    class Movie extends Media {
       constructor(director, title, runtime) {
         super(title);
         this._director = director;
@@ -56,14 +56,19 @@ class Media {
       get runTime() {
         return this._runTime;
       }
-    }
-    const historyOfEverything = new Book('Bill Bryson', 'A short History of Nearly Everything', 544);
+        const historyOfEverything = new Book('Bill Bryson', 'A short History of Nearly Everything', 544);
     historyOfEveryathing.toggleCheckOutStatus();
     console.log(historyOfEverything);
     historyOfEverything.addRating(4);
     historyOfEverything.addRating(5);
     historyOfEverything.addRating(5);
     console.log(historyOfEverthing.getAverageRating());
-    const speed = new Movie()
+    const speed = new Movie('Jan de Bont', 'Speed', 116);
+    speed.toggleCheckoutStatus();
+    console.log(speed.isCheckedOut);
+    speed.addRating(1);
+    speed.addRating(1);
+    speed.addRating(5);
+    console.log(speed.getAverageRating());
   
-  }
+    }
